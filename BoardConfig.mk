@@ -15,9 +15,6 @@ TARGET_OTA_ASSERT_DEVICE := surya,karna
 # Audio
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
-# HIDL
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
-
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/surya.config
 
