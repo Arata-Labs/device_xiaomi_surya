@@ -29,6 +29,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/libnfc-nci.conf': blob_fixup()
+        .regex_replace('/data/nfc', '/data/vendor/nfc'),
     'vendor/etc/init/init.batterysecret.rc': blob_fixup()
         .regex_replace(r'\s+seclabel u:r:batterysecret:s0', ''),
     'vendor/etc/init/init.mi_thermald.rc': blob_fixup()
