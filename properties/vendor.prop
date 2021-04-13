@@ -20,7 +20,7 @@ persist.vendor.fingerprint.sensor_modules=goodix,fpc
 persist.vendor.fingerprint.sensor_location=1080|920|220|local:4630946688386997377,1080|920|220|local:4630946772315683201
 
 # Fluence
-ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.fluencetype=none
 
 # HVDCP
 persist.vendor.cp.fcc_main_ua=400000
