@@ -16,7 +16,8 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # Fingerprint
 persist.vendor.fingerprint.type=side
-persist.vendor.fingerprint.sensor_location=1080|990|200|local:4630946711218184577
+persist.vendor.fingerprint.sensor_modules=goodix,fpc
+persist.vendor.fingerprint.sensor_location=1080|920|220|local:4630946688386997377,1080|920|220|local:4630946772315683201
 
 # Fluence
 ro.vendor.audio.sdk.fluencetype=fluence
