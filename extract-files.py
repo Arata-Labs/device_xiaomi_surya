@@ -43,6 +43,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
+        .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
     ('vendor/lib64/libVDSuperPhotoAPI.so', 'vendor/lib64/libhvx_interface.so', 'vendor/lib64/libmialgo_rfs.so'): blob_fixup()
         .clear_symbol_version('remote_handle_close')
         .clear_symbol_version('remote_handle_invoke')
