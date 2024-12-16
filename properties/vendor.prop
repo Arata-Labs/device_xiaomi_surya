@@ -7,6 +7,9 @@ persist.vendor.audio.voicecall.speaker.stereo=true
 vendor.audio.feature.compr_voip.enable=false
 vendor.voice.path.for.pcm.voip=true
 
+# Camera
+vendor.camera.remapid=0 1 21 22 25 61 100 101
+
 # Display
 debug.sf.frame_rate_multiple_threshold=120
 ro.surface_flinger.set_idle_timer_ms=500
