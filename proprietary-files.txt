@@ -334,8 +334,6 @@ vendor/firmware/a618_gmu.bin
 vendor/firmware/a630_sqe.fw
 
 # NFC
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp.conf
 vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # Sensors
