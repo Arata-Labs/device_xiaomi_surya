@@ -67,8 +67,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Overlay-RRO
 PRODUCT_PACKAGES += \
+    KarnaPowerProfile \
     KarnaSettingsProvider \
     KarnaWifiOverlay \
+    SuryaPowerProfile \
     SuryaSettingsProvider \
     SuryaWifiOverlay
 
