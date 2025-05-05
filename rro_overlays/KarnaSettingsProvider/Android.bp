@@ -1,4 +1,4 @@
 runtime_resource_overlay {
     name: "KarnaSettingsProvider",
-    product_specific: true,
+    vendor: true,
 }
