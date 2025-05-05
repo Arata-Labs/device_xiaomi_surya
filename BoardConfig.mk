@@ -16,7 +16,8 @@ TARGET_OTA_ASSERT_DEVICE := surya,karna
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/surya.config
+TARGET_KERNEL_CONFIG := surya_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
