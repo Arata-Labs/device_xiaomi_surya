@@ -15,6 +15,8 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Audio
+TARGET_EXCLUDES_AUDIOFX := true
+
 PRODUCT_PACKAGES += \
     sku_surya_audio_symlink
 
