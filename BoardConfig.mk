@@ -35,6 +35,9 @@ BOARD_SUPER_PARTITION_SIZE := 8589934592
 
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 8585740288 # (BOARD_SUPER_PARTITION_SIZE - 4194304) 4MiB overhead
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
