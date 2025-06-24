@@ -98,6 +98,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal
 
+# Signing
+-include vendor/private-keys/keys/keys.mk
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
