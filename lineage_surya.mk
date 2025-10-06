@@ -15,10 +15,38 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Axionify
+TARGET_ENABLE_BLUR := true
+AXION_CAMERA_REAR_INFO := 64,13,2,2
+AXION_CAMERA_FRONT_INFO := 20
+AXION_MAINTAINER := Skyy丨アラタ
+AXION_PROCESSOR := Qualcomm®_Snapdragon_732G
+
+# Charging
+BYPASS_CHARGE_SUPPORTED := true
+
+# CPU governor support
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
+PERF_ANIM_OVERRIDE := false
+
+# GPU
+# GPU_FREQS_PATH := /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/devfreq/5000000.qcom,kgsl-3d0/available_frequencies
+# GPU_MIN_FREQ_PATH := /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/devfreq/5000000.qcom,kgsl-3d0/min_freq
+
+# GMS
+WITH_GMS := true
+
+# Los prebuilts
+ifneq ($(WITH_GMS),true)
+TARGET_INCLUDES_LOS_PREBUILTS := true
+endif
+
 # Additional flags
 TORCH_STR_SUPPORTED := true
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
+# Device Manufacturer
 PRODUCT_NAME := lineage_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
