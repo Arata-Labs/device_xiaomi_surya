@@ -17,6 +17,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Additional flags
 TORCH_STR_SUPPORTED := true
+TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
 PRODUCT_NAME := lineage_surya
 PRODUCT_DEVICE := surya
