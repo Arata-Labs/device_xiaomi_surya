@@ -1,4 +1,4 @@
-on property:ro.boot.product.vendor.sku=sweet
+on property:ro.boot.product.hardware.sku=surya
     enable vendor.nfc_hal_service
 
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp

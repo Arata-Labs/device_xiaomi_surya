@@ -13,15 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<!-- Device specific wifi overlays -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.sweet"
-    android:versionCode="1"
-    android:versionName="1.0">
-    <application android:hasCode="false" />
+    package="com.android.settingsproviders.karna">
+
     <overlay
-      android:targetPackage="com.android.wifi.resources"
-      android:targetName="WifiCustomization"
-      android:isStatic="true"
-      android:priority="0"/>
+        android:isStatic="true"
+        android:priority="1"
+        android:requiredSystemPropertyName="ro.boot.hwname"
+        android:requiredSystemPropertyValue="karna"
+        android:targetPackage="com.android.providers.settings" />
 </manifest>

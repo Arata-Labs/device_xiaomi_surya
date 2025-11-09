@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "KarnaWifiOverlay",
+    theme: "KarnaWifiOverlay",
+    product_specific: true,
+}

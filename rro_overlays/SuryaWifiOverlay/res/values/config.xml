@@ -13,13 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settingsproviders.sweetinpro">
 
-    <overlay
-        android:isStatic="true"
-        android:priority="1"
-        android:requiredSystemPropertyName="ro.boot.hwc,ro.boot.product.hardware.sku"
-        android:requiredSystemPropertyValue="INDIA,pro"
-        android:targetPackage="com.android.providers.settings" />
-</manifest>
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds.  Do not translate.
+
+     NOTE: The naming convention is "config_camelCaseValue". Some legacy
+     entries do not follow the convention, but all new entries should. -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Do not translate. Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Poco X3 NFC</string>
+</resources>

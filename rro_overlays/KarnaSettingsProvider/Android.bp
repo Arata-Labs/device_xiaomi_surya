@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "SweetinproSettingsProvider",
+    name: "KarnaSettingsProvider",
     product_specific: true,
 }

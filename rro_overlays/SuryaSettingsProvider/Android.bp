@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SuryaSettingsProvider",
+    product_specific: true,
+}
