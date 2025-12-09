@@ -344,6 +344,7 @@ vendor/firmware/a630_sqe.fw
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so;FIX_SONAME
 
 # NFC
+vendor/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
 vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # Sensors
