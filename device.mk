@@ -28,18 +28,10 @@ PRODUCT_COPY_FILES += \
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/surya-camera.mk)
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    DSPVolumeSynchronizer \
-    XiaomiDolby
-
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/qdcm_calib_data_nt36672c_huaxing_fhd_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_nt36672c_huaxing_fhd_video_mode_dsi_panel.xml \
     $(LOCAL_PATH)/configs/display/qdcm_calib_data_nt36672c_tianma_fhd_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_nt36672c_tianma_fhd_video_mode_dsi_panel.xml
-
-# Dolby
-TARGET_USES_DOLBY := true
 
 # Init scripts
 PRODUCT_COPY_FILES += \
