@@ -18,11 +18,39 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Signing
 -include vendor/private-keys/keys/keys.mk
 
+# Axionify
+ifeq ($(TARGET_PRODUCT),axion_surya)
+    TARGET_ENABLE_BLUR := true
+    AXION_CAMERA_REAR_INFO := 64,13,2,2
+    AXION_CAMERA_FRONT_INFO := 20
+    AXION_MAINTAINER := Skyy丨アラタ
+    AXION_PROCESSOR := Qualcomm®_Snapdragon_732G
+    BYPASS_CHARGE_SUPPORTED := true
+    PERF_GOV_SUPPORTED := true
+    PERF_DEFAULT_GOV := schedutil
+    PERF_ANIM_OVERRIDE := false
+    WITH_GMS := true
+    # Los prebuilts
+    ifneq ($(WITH_GMS),true)
+        TARGET_INCLUDES_LOS_PREBUILTS := true
+    endif
+endif
+
+# OrionOS flags
+ifeq ($(TARGET_PRODUCT),orion_surya)
+    ORION_MAINTAINER := Skyy丨アラタ
+    ORION_GAPPS := true
+    WITH_GMS := true
+    TARGET_ENABLE_BLUR := true
+    TARGET_BOOT_ANIMATION_RES := 1080
+endif
+
 # Additional flags
 TORCH_STR_SUPPORTED := true
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
-PRODUCT_NAME := lineage_surya
+# Device Manufacturer
+PRODUCT_NAME := $(TARGET_PRODUCT)
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
