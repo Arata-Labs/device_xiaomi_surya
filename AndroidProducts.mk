@@ -6,6 +6,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_surya.mk \
-    $(LOCAL_DIR)/axion_surya.mk \
-    $(LOCAL_DIR)/orion_surya.mk \
     $(LOCAL_DIR)/afterlife_surya.mk
