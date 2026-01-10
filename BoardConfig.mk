@@ -49,6 +49,6 @@ VENDOR_SECURITY_PATCH := 2023-06-01
 include vendor/xiaomi/surya/BoardConfigVendor.mk
 
 # Axion Sepolicy
-ifeq ($(TARGET_PRODUCT),axion_surya)
+ifeq ($(IS_AXION),true)
     BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/axion
 endif

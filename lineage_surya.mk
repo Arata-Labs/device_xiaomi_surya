@@ -18,6 +18,38 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Signing
 -include vendor/private-keys/keys/keys.mk
 
+# Axionify
+ifeq ($(IS_AXION),true)
+    TARGET_ENABLE_BLUR := true
+    AXION_CAMERA_REAR_INFO := 64,13,2,2
+    AXION_CAMERA_FRONT_INFO := 20
+    AXION_MAINTAINER := Skyy丨アラタ
+    AXION_PROCESSOR := Qualcomm®_Snapdragon_732G
+    BYPASS_CHARGE_SUPPORTED := true
+    PERF_GOV_SUPPORTED := true
+    PERF_DEFAULT_GOV := schedutil
+    PERF_ANIM_OVERRIDE := false
+    WITH_GMS := true
+    # Los prebuilts
+    ifneq ($(WITH_GMS),true)
+        TARGET_INCLUDES_LOS_PREBUILTS := true
+    endif
+
+    # Enable or disable ScrollOptimizer globally
+    PRODUCT_SYSTEM_PROPERTIES += \
+        persist.sys.perf.scroll_opt=true \
+        persist.sys.perf.scroll_opt.heavy_app=1
+endif
+
+# OrionOS flags
+ifeq ($(IS_ORION),true)
+    ORION_MAINTAINER := Skyy丨アラタ
+    ORION_GAPPS := true
+    WITH_GMS := true
+    TARGET_ENABLE_BLUR := true
+    TARGET_BOOT_ANIMATION_RES := 1080
+endif
+
 # Additional flags
 TORCH_STR_SUPPORTED := true
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
