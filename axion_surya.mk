@@ -6,7 +6,7 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-TARGET_SUPPORTS_OMX_SERVICE := false
+TARGET_SUPPORTS_ OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from surya device
@@ -18,12 +18,34 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Signing
 -include vendor/private-keys/keys/keys.mk
 
+# Axion Specifics
+TARGET_ENABLE_BLUR := true
+AXION_CAMERA_REAR_INFO := 64,13,2,2
+AXION_CAMERA_FRONT_INFO := 20
+AXION_MAINTAINER := Skyy丨アラタ
+AXION_PROCESSOR := Qualcomm®_Snapdragon_732G
+BYPASS_CHARGE_SUPPORTED := true
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
+PERF_ANIM_OVERRIDE := false
+WITH_GMS := true
+
+# Los prebuilts
+ifneq ($(WITH_GMS),true)
+    TARGET_INCLUDES_LOS_PREBUILTS := true
+endif
+
+# Enable or disable ScrollOptimizer globally
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.perf.scroll_opt=true \
+    persist.sys.perf.scroll_opt.heavy_app=1
+
 # Additional flags
 TORCH_STR_SUPPORTED := true
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
 # Device Manufacturer
-PRODUCT_NAME := lineage_surya
+PRODUCT_NAME := axion_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
