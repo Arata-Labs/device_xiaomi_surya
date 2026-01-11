@@ -110,5 +110,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# Inherit surya firmware images
+$(call inherit-product, firmware/xiaomi/surya/Android.mk)
+
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
