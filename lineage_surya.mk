@@ -34,11 +34,6 @@ ifeq ($(IS_AXION),true)
     ifneq ($(WITH_GMS),true)
         TARGET_INCLUDES_LOS_PREBUILTS := true
     endif
-
-    # Enable or disable ScrollOptimizer globally
-    PRODUCT_SYSTEM_PROPERTIES += \
-        persist.sys.perf.scroll_opt=true \
-        persist.sys.perf.scroll_opt.heavy_app=1
 endif
 
 # OrionOS flags
